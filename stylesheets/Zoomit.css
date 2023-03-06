@@ -1,14 +1,74 @@
-@font-face{
-	font-family: irsans;
-	src: url(irsans.ttf);
+@font-face {
+  font-family: irsans;
+  src: url(irsans.ttf);
 }
 
-*{
-	direction: rtl;
-	font-family: irsans;
-	line-height: 2;
-	font-size: 14px;
-	font-weight: 400;
-	margin: 0;
-	padding: 0;
+* {
+  direction: rtl;
+  font-family: irsans;
+  line-height: 2;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.t-header {
+  position: relative;
+  /* display: flex;*/
+  /*flex-direction: column; */
+}
+.header-top,
+.header-bottom {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+}
+.top-right {
+  color: lightgray;
+}
+.top-right ul,
+.bottom-right ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.top-right ul li,
+.bottom-right ul li {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.top-right ul li:hover,
+.bottom-right ul li:hover {
+  transition: 0.3s;
+  color: red;
+}
+.top-left {
+  color: white;
+}
+.header-bottom {
+  background-color: rgb(47, 46, 46);
+  color: white;
+  padding: 1% 0.8rem;
+}
+.bottom-right {
+}
+.t-header a {
+  text-decoration: none;
+  color: white;
+}
+.header-logo,
+.header-date {
+  position: absolute;
+  top: 0;
+  background: url("../Zoomit/logo-bg.png") no-repeat;
+  background-size: cover;
+  /* back; */
+}
+.header-logo img {
+  max-width: 12rem;
+  max-height: 5.3rem;
+  padding: 20px;
+}
+.header-date {
+  left: 0;
 }
