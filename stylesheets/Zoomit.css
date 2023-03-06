@@ -1,0 +1,14 @@
+@font-face{
+	font-family: irsans;
+	src: url(irsans.ttf);
+}
+
+*{
+	direction: rtl;
+	font-family: irsans;
+	line-height: 2;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
