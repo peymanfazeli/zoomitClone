@@ -13,6 +13,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+}
 .t-header {
   position: relative;
 }
@@ -25,7 +28,6 @@
 .menu {
   display: flex;
   flex-direction: row;
-  list-style: none;
   color: lightgray;
 }
 .menu-item {
@@ -80,7 +82,6 @@
   display: grid;
   grid-template-columns: repeat(3, 0fr);
   grid-auto-rows: minmax(200px, auto);
-  list-style: none;
 }
 .grid-view-block {
   /* display: inline-block; */
@@ -130,16 +131,80 @@
   opacity: 0.7;
   transition: 0.3s;
 }
-/* left advertisement */
-.advertisement-left {
-  /* display: flex;
-  flex-direction: column; */
+/* the main body after grid part */
+.top-body-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1%;
 }
+.advertisement-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 25%;
+}
+.suggestions {
+  padding: 0 1% 0 1%;
+  width: 100%;
+}
+.suggestions .content .topic {
+  color: #ccc;
+}
+.suggestions .content .title {
+  color: black;
+  font-size: small;
+  font-weight: bold;
+}
+.suggestions .head-title {
+  background-color: #eee;
+}
+.suggestions ul {
+  display: flex;
+}
+.suggestions .suggestion-items {
+  width: 100%;
+}
+.suggestion-items img {
+  width: 150px;
+  margin-left: 10%;
+}
+/* left advertisement */
 .advertisements-left img {
-  width: 75%;
+  width: 100%;
   height: 150px;
   margin: 0 0.5rem 0 1.3rem;
 }
+/* left learning section */
+.learning-section {
+  width: 100%;
+  margin-right: 0.5rem;
+}
+.learning-items,
+.suggestion-items {
+  width: 100%;
+  padding: 2%;
+
+  background-color: #fff;
+  position: relative;
+}
+.learning-items:first-child {
+  background-color: lightgray;
+  border-bottom: none;
+}
+.learning-items img {
+  padding: 2%;
+  width: 30%;
+  float: right;
+}
+.learning-items .content h3 {
+  font-size: x-small;
+  color: gray;
+}
+.learning-items .content h4 {
+  font-size: 8pt;
+  color: black;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 599px) and (min-width: 450px) {
   /* mobile to tablet */
