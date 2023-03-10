@@ -16,6 +16,10 @@
 ul {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: #ccc;
+}
 .t-header {
   position: relative;
 }
@@ -265,7 +269,9 @@ article .article-adv {
   color: black;
 }
 /* slider section */
-.slider-section {
+.slider-section,
+.footer-section,
+footer {
   margin-top: 5%;
   background-color: black;
   padding: 2%;
@@ -299,17 +305,19 @@ article .article-adv {
   width: 100%;
 }
 .slider-items .shadow,
-.cons-grid-items .shadow {
-  position: absolute;
-  top: 20%;
-  width: 100%;
-  height: 80%;
+.consideration-section .shadow {
   background: black;
   background: linear-gradient(
     360deg,
     rgba(0, 0, 0, 0.5) 0%,
     rgba(5, 9, 5, 0.5) 90%
   );
+}
+.slider-items .shadow {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 80%;
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.9);
 }
 .slider-btn {
@@ -333,35 +341,164 @@ article .article-adv {
 .consideration-section #consideration-topic {
   margin: 0 5% 2% 0;
 }
-/* consideration part  */
+/*@todo consideration part  */
 .consideration-section {
   background-color: #ccc;
   padding: 2%;
-  /* display: flex;
-  justify-content: center; */
 }
-.consideration-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 0fr);
-  grid-auto-rows: 35%;
-  gap: 2%;
+.cons-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  background-color: #fff;
+  padding: 3%;
 }
-.cons-grid-items {
+.consideration-section .content {
+  font-size: xx-small;
+  font-weight: 50;
+  width: 50%;
+}
+.cons-container .cons-smaller {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+}
+.cons-smaller .cons-item {
   width: 250px;
-  height: 100px;
+  padding: 0;
   position: relative;
 }
-.cons-grid-items img {
+.cons-item img,
+.consideration-section .shadow,
+.cons-item .content {
+  position: absolute;
+  bottom: 0;
+}
+.cons-smaller img {
+  width: 50%;
+  height: 50%;
+}
+.cons-item:first-child img {
+  width: 70%;
+  height: 70%;
+}
+.cons-item:first-child .shadow {
+  width: 70%;
+  height: 50%;
+}
+.cons-item:nth-child(2) img {
+  width: 80%;
+  height: 80%;
+}
+.cons-bigger {
+  position: relative;
+  right: -200px;
+}
+.consideration-section .shadow {
+  background: black;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(5, 9, 5, 0.3) 0%
+  );
+  height: 50%;
+  width: 80%;
+  /* box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.9); */
+}
+.cons-bigger {
+  position: relative;
+}
+.cons-bigger h4 {
+  position: relative;
+  top: -50px;
+  right: 2%;
+}
+.cons-bigger .shadow,
+.cons-bigger .content {
   width: 100%;
-  height: 100%;
+  height: 50%;
+  bottom: 30px;
 }
-.consideration-grid #item-three {
-  justify-self: end;
-  height: 100%;
-  grid-column: 1/3;
-  grid-row: 1/3;
+/* footer */
+.footer-section,
+footer {
+  margin: 0;
+  display: flex;
 }
+.footer-section .topic {
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 5%;
+}
+.footer-list {
+  width: 30%;
+  text-align: start;
+  margin-bottom: 1%;
+  border-bottom: 1px solid #bbb;
+}
+.footer-list img {
+  display: inline-block;
+  width: 20%;
+}
+.footer-list .content {
+  display: inline-block;
+  width: 70%;
+  font-size: small;
+  margin-right: 2%;
+}
+.footer-item:not(.footer-item:last-child) {
+  margin-bottom: 5%;
+}
+#news-mail {
+  padding: 4%;
+  background-color: rgba(109, 109, 109, 0.4);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+}
+#news-mail:focus {
+  outline: none;
+}
+#news-mail::placeholder {
+  font-size: small;
+  padding-right: 1.5rem;
+}
+.news {
+  position: relative;
+}
+.news .fa {
+  position: absolute;
+  right: 0.4rem;
+  top: 35%;
+}
+.footer-btn {
+  padding: 4%;
+  background-color: red;
+  color: #ccc;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+footer {
+  justify-content: space-evenly;
+}
+footer a:not(footer .social a) {
+  color: red;
+}
+footer .social-list {
+  display: flex;
+  flex-direction: row;
+  color: #bbb;
+}
+.social-list .social-item {
+  width: 25%;
+  text-align: center;
+  margin-left: 3%;
+  border-radius: 25%;
+  background-color: rgba(109, 109, 109, 0.4);
+}
+
 /* Responsiveness */
 @media screen and (max-width: 599px) and (min-width: 450px) {
   /* mobile to tablet */
@@ -414,6 +551,11 @@ article .article-adv {
   }
   .slider .slider-btn {
     display: none;
+  }
+  .footer-section,
+  footer {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 1800px) and (min-width: 768px) {
