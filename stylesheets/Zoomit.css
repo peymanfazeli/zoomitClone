@@ -146,11 +146,13 @@ ul {
 .head-title {
   background-color: #eee;
 }
-.advertisement-right {
+.advertisement-right,
+.advertisements-left {
   grid-area: 1 / 1 / 3 / 2;
 }
 .side-box {
   width: 100%;
+  height: 500px;
   position: relative;
   background-color: white;
 }
@@ -164,7 +166,9 @@ ul {
   padding: 2%;
   right: 0;
   background-color: white;
-  /* padding: 2%; */
+}
+.side-box .box-items {
+  height: 35%;
 }
 .suggestions {
   grid-area: 1 / 2 / 2 / 3;
@@ -200,6 +204,9 @@ ul {
   background-color: #fff;
   border-bottom: 1px solid gray;
 }
+.new-posts article:last-child {
+  border-bottom: 0;
+}
 article .info {
   color: lightgray;
   font-size: medium;
@@ -223,7 +230,6 @@ article .article-adv {
 /* left advertisement */
 .advertisements-left img {
   width: 100%;
-  height: 150px;
   margin: 0 0.5rem 0 1.3rem;
 }
 /* left learning section */
@@ -235,9 +241,11 @@ article .article-adv {
 .suggestion-items {
   width: 100%;
   padding: 2%;
-
   background-color: #fff;
   position: relative;
+}
+.learning-items {
+  float: left;
 }
 .learning-items:first-child {
   background-color: lightgray;
@@ -256,7 +264,104 @@ article .article-adv {
   font-size: 8pt;
   color: black;
 }
-
+/* slider section */
+.slider-section {
+  margin-top: 5%;
+  background-color: black;
+  padding: 2%;
+  color: white;
+  width: 100%;
+}
+.slider {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+.slider-items {
+  /* display: inline-block; */
+  width: 30%;
+  height: 100%;
+  padding-left: 3%;
+  position: relative;
+}
+.slider-items .content,
+.cons-grid-items .content {
+  position: absolute;
+  bottom: 5%;
+  padding: 0 10%;
+}
+.slider-items .content h4 {
+  color: white;
+}
+.slider-items img {
+  width: 100%;
+}
+.slider-items .shadow,
+.cons-grid-items .shadow {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 80%;
+  background: black;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(5, 9, 5, 0.5) 90%
+  );
+  box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.9);
+}
+.slider-btn {
+  height: 150px;
+  width: 50px;
+  opacity: 0.5;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 50px;
+}
+.slider-btn:hover {
+  opacity: 0.7;
+}
+#slider-right-btn {
+  right: 7%;
+}
+#slider-left-btn {
+  left: 10%;
+}
+.slider-section #slider-topic,
+.consideration-section #consideration-topic {
+  margin: 0 5% 2% 0;
+}
+/* consideration part  */
+.consideration-section {
+  background-color: #ccc;
+  padding: 2%;
+  /* display: flex;
+  justify-content: center; */
+}
+.consideration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  grid-auto-rows: 35%;
+  gap: 2%;
+  justify-content: center;
+}
+.cons-grid-items {
+  width: 250px;
+  height: 100px;
+  position: relative;
+}
+.cons-grid-items img {
+  width: 100%;
+  height: 100%;
+}
+.consideration-grid #item-three {
+  justify-self: end;
+  height: 100%;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
 /* Responsiveness */
 @media screen and (max-width: 599px) and (min-width: 450px) {
   /* mobile to tablet */
@@ -297,13 +402,18 @@ article .article-adv {
     width: 150px;
   }
   .grid-view-container,
-  .top-body-container ul {
+  .top-body-container ul,
+  .slider {
     display: flex;
     flex-direction: column;
   }
   .grid-view-block,
-  .suggestion-items {
+  .suggestion-items,
+  .slider-items {
     width: 100%;
+  }
+  .slider .slider-btn {
+    display: none;
   }
 }
 @media screen and (max-width: 1800px) and (min-width: 768px) {
