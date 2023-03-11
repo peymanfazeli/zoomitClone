@@ -223,6 +223,7 @@ article .fa {
 article .content {
   float: left;
   width: 50%;
+  background-color: #fff;
 }
 article img {
   width: 40%;
@@ -230,8 +231,16 @@ article img {
 article .article-adv {
   width: 100%;
 }
+.new-posts article:last-child {
+  padding-bottom: 0;
+}
 /* article . */
 /* left advertisement */
+.advertisements-left {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
 .advertisements-left img {
   width: 100%;
   margin: 0 0.5rem 0 1.3rem;
@@ -523,7 +532,7 @@ footer .social-list {
   }
   .advertisements-left img,
   .advertisement-right img {
-    width: 150px;
+    width: 50px;
   }
   .grid-view-container,
   .top-body-container ul,
