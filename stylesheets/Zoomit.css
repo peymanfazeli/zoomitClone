@@ -602,7 +602,30 @@ footer .social-list {
     justify-content: center;
   }
 }
-@media screen and (max-width: 1800px) and (min-width: 768px) {
+@media screen and (max-width: 1300px) and (min-width: 760px) {
+  .grid-view-container,
+  .top-body-container ul,
+  .slider,
+  .consideration-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-view-block:first-child,
+  .grid-view-block:last-child {
+    width: 350px;
+    height: 200px;
+  }
+  .slider-btn {
+    display: none;
+  }
+  .header-logo-container .header-logo {
+    width: 20%;
+    height: 10%;
+  }
+}
+@media screen and (max-width: 1800px) and (min-width: 1301px) {
   /* normal screens to extra large */
   .menu {
     font-size: 14px;
