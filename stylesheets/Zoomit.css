@@ -31,24 +31,27 @@ a {
 }
 .header-bottom {
   position: relative;
+  /* height: 60px; */
 }
 .menu {
   display: flex;
   flex-direction: row;
   color: lightgray;
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
   /* position: relative; */
   align-items: center;
-  line-height: 60px;
+  /* line-height: 20px; */
 }
 .menu-item {
   margin-left: 0.8rem;
   cursor: pointer;
+  display: block;
 }
-.menu-item:hover a {
+.menu-item:hover {
   transition: 0.3s;
-  color: red;
+  background-color: rgba(109, 109, 109, 0.4);
+  border-top: 1px solid yellowgreen;
 }
 .menu-item .menu-down {
   width: 10px;
@@ -363,6 +366,9 @@ footer {
   height: 80%;
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.9);
 }
+.slider-items:hover .shadow {
+  top: 0;
+}
 .slider-btn {
   height: 150px;
   width: 50px;
@@ -384,7 +390,7 @@ footer {
 .consideration-section #consideration-topic {
   margin: 0 5% 2% 0;
 }
-/*@todo consideration part  */
+/*consideration part  */
 .consideration-section {
   background-color: #ccc;
   padding: 2%;
@@ -422,12 +428,6 @@ footer {
   grid-column: 4/6;
   grid-row: 1/3;
 }
-/* .consideration-grid-container .item-4 {
-}
-.cons-grid-items .item-5 {
-}
-.consideration-grid-container .item-6 {
-} */
 .consideration-section .shadow {
   background: black;
   background: linear-gradient(
@@ -443,7 +443,11 @@ footer {
   position: absolute;
   bottom: 0;
 }
-
+.slider-items:hover .shadow,
+.cons-grid-items:hover .shadow {
+  height: 100%;
+  transition: 0.3s;
+}
 /* footer */
 .footer-section,
 footer {
@@ -460,6 +464,7 @@ footer {
   text-align: start;
   margin-bottom: 1%;
   border-bottom: 1px solid #bbb;
+  cursor: pointer;
 }
 .footer-list img {
   display: inline-block;
@@ -471,6 +476,7 @@ footer {
   font-size: small;
   margin-right: 2%;
 }
+
 .footer-item:not(.footer-item:last-child) {
   margin-bottom: 5%;
 }
@@ -503,7 +509,8 @@ footer {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.footer-list .footer-item a:hover {
+.footer-list .footer-item:hover a,
+.footer-list .content .title:hover {
   color: red;
   transition: 0.3s;
 }
