@@ -47,6 +47,7 @@ a {
   position: relative;
   left: -31%;
   color: white;
+  min-width: 15%;
   width: 30%;
 }
 .h-top #h-search:focus {
@@ -54,6 +55,7 @@ a {
 }
 #h-logo {
   margin-right: 20%;
+  max-width: 100%;
 }
 .h-bottom {
   background-color: rgb(63, 63, 63);
@@ -148,7 +150,7 @@ a {
     rgba(255, 255, 255, 0.9)
   );
   width: 100%;
-  height: 100%;
+  height: 500px;
 }
 .content .content-title {
   position: absolute;
@@ -191,10 +193,12 @@ a {
 .main-box .side-box {
   width: 30%;
 }
-.main-section .explanations {
-  text-align: justify;
+.main-section article {
   margin-bottom: 2%;
   border-bottom: 1px solid #ccc;
+}
+.main-section .explanations {
+  text-align: justify;
 }
 .explanations span {
   line-height: 30px;
@@ -209,9 +213,116 @@ a {
 .explanations .summary {
   display: inline-block;
   float: left;
-  color: red;
   width: 200px;
   height: 200px;
   text-align: justify;
   margin: 2%;
+}
+.explanations .summary,
+.explanations span a {
+  color: red;
+}
+.most-like {
+  text-align: right;
+}
+.most-like ul .title {
+  text-align: right;
+  padding: 2%;
+  background-color: #ccc;
+  color: darkslategrey;
+}
+.most-like ul .most-like-items {
+  padding-top: 1%;
+  display: flex;
+  position: relative;
+}
+
+.most-like-items img,
+.most-like-items .black-layer {
+  width: 200px;
+  height: 200px;
+}
+.most-like-items img {
+  position: relative;
+}
+.most-like-items .black-layer {
+  position: absolute;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+.ml-content {
+  text-align: right;
+  margin-right: 2%;
+}
+.ml-content h3,
+.ml-content p {
+  text-align: right;
+  margin-bottom: 2%;
+}
+.ml-content h3 {
+  font-size: larger;
+  font-weight: bolder;
+}
+.ml-content p {
+  font-size: x-small;
+  font-weight: 100;
+}
+.circle1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.circle2 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-top-color: white;
+  border-right-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-40deg);
+  box-sizing: border-box;
+  padding: 5px;
+  opacity: 0.3;
+}
+.circle1:hover .circle2 {
+  border-top-color: black;
+  border-right-color: white;
+  transform: rotate(320deg);
+  transition: 0.3s;
+}
+.circle1:hover .circle2,
+.circle1:hover .circle3 span {
+  opacity: 1;
+}
+
+.circle3 {
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle3 span {
+  opacity: 0.5;
+  position: absolute;
+  transform: rotate(-320deg);
+  color: white;
+  font-size: 16px;
 }
