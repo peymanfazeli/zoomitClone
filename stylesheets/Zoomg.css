@@ -1,16 +1,119 @@
-@font-face{
-	font-family: irsans;
-	src: url(irsans.ttf);
+@font-face {
+  font-family: irsans;
+  src: url(irsans.ttf);
 }
 
-*{
-	direction: rtl;
-	font-family: irsans;
-	line-height: 1.4;
-	font-size: 14px;
-	font-weight: 400;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-
+* {
+  direction: rtl;
+  font-family: irsans;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.h-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: black;
+  padding: 0 2%;
+}
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list .social-item,
+.user-assistance li {
+  text-align: center;
+  margin-left: 20%;
+  border-radius: 25%;
+  background-color: transparent;
+  color: #ccc;
+}
+.h-top #h-search {
+  margin: 0.5%;
+  background-color: gray;
+  position: relative;
+  left: -31%;
+  color: white;
+}
+.h-top #h-search:focus {
+  outline: 0;
+}
+#h-logo {
+  margin-right: 20%;
+}
+.h-bottom {
+  background-color: rgb(63, 63, 63);
+  height: 10vh;
+  padding: 0 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  color: lightgray;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.menu-item {
+  margin-left: 0.8rem;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  line-height: 50%;
+}
+.menu-item:hover {
+  transition: 0.3s;
+  background-color: rgba(109, 109, 109, 0.4);
+  border-top: 2px solid yellowgreen;
+}
+.menu-item .menu-down {
+  width: 10px;
+  height: 10px;
+}
+.sub-menu-container {
+  display: none;
+}
+.menu-item:hover .sub-menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background-color: #ccc;
+  z-index: 10;
+}
+.sub-menu-container .sub-menu-item {
+  padding: 2%;
+  text-align: center;
+}
+.sub-menu-container .sub-menu-item p {
+  color: black;
+}
+.bottom-left {
+  padding-left: 5%;
+}
+.bottom-left ul {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-left ul li:hover .fa {
+  color: white;
+  transition: 0.3s;
 }
