@@ -428,3 +428,49 @@ body {
   text-align: right;
   margin-top: 5%;
 }
+.login-alert {
+  float: right;
+}
+footer {
+  background: #000;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .topic {
+  color: white;
+  margin-bottom: 5%;
+  display: flex;
+}
+footer .topic a {
+  font-style: italic;
+  margin-right: 10%;
+}
+footer li {
+  margin-bottom: 2%;
+  text-align: right;
+  width: 50%;
+  line-height: 2;
+}
+footer .icons {
+  margin-right: 10%;
+  display: flex;
+  align-items: start;
+}
+footer .icons li {
+  margin-left: 15%;
+}
+footer .icons li:hover a {
+  color: red;
+  transition: 0.3s;
+}
+footer .best-items .number {
+  font-size: xx-large;
+  color: white;
+}
+.footer {
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  color: gray;
+}
