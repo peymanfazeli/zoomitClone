@@ -85,11 +85,30 @@ body {
   align-items: center;
   height: 100%;
   text-align: center;
+  /* position: relative; */
 }
 .menu-item:hover {
   transition: 0.3s;
   background-color: rgba(109, 109, 109, 0.4);
-  border-top: 2px solid yellowgreen;
+  border-top: 2px solid;
+}
+.menu-item:hover.menu-item:nth-child(2) {
+  border-color: orange;
+}
+.menu-item:hover.menu-item:nth-child(3) {
+  border-color: skyblue;
+}
+.menu-item:hover.menu-item:nth-child(4) {
+  border-color: purple;
+}
+.menu-item:hover.menu-item:nth-child(5) {
+  border-color: greenyellow;
+}
+.menu-item:hover.menu-item:nth-child(6) {
+  border-color: yellow;
+}
+.menu-item:hover.menu-item:nth-child(7) {
+  border-color: red;
 }
 .menu-item .menu-down {
   width: 10px;
@@ -101,17 +120,49 @@ body {
 }
 .sub-menu-container {
   display: none;
+  position: relative;
+}
+.menu-item .sub-arrow {
+  display: none;
+}
+.menu-item:hover .sub-arrow {
+  display: block;
+  position: relative;
+  top: 12px;
+  right: 2px;
+  z-index: 100;
 }
 .menu-item:hover .sub-menu-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: absolute;
   top: 20%;
   right: 0;
   width: 100%;
   background-color: #ccc;
   z-index: 10;
+}
+.sub-menu-container .side-sub-menu-container {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: -30px;
+  height: 100%;
+  margin-right: 2%;
+  padding: 2%;
+}
+.side-sub-menu-container .side-sub-items {
+  text-align: right;
+}
+.side-sub-items:first-child a {
+  color: orange;
+}
+.side-sub-items:first-child a {
+  color: skyblue;
+}
+.sub-menu-container .first-menu-content {
+  margin-right: 50%;
 }
 .sub-menu-container .sub-menu-item {
   padding: 2%;
