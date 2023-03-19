@@ -652,6 +652,24 @@ footer .best-items .number {
 .bakhsh-ha button {
   padding: 2%;
 }
+.az-zoomit .zoomit-item {
+  float: right;
+}
+.zoomit-item p,
+.zoomit-item span {
+  display: block;
+  float: right;
+  text-align: right;
+  margin-bottom: 5%;
+}
+.zoomit-item span {
+  font-weight: bold;
+}
+.zoomit-item p {
+  font-style: italic;
+  font-size: smaller;
+  color: #bbb;
+}
 /* first one */
 .side-box .consideration .cons-first-item,
 .side-box .consideration .cons-first-item .content-pic img {
@@ -662,4 +680,22 @@ footer .best-items .number {
 }
 .cons-first-item .content .side-footer {
   top: 150px;
+}
+
+/* up btn */
+.up-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+.up-button:hover {
+  background-color: #3e8e41;
 }
