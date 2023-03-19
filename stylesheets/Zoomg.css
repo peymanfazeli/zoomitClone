@@ -338,9 +338,9 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 10px solid white;
-  border-top-color: white;
-  border-right-color: white;
+  border: 2px solid greenyellow;
+  border-top-color: greenyellow;
+  border-right-color: greenyellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,7 +351,7 @@ body {
 }
 .circle1:hover .circle2 {
   border-top-color: black;
-  border-right-color: white;
+  border-right-color: greenyellow;
   transform: rotate(320deg);
   transition: 0.3s;
 }
@@ -473,4 +473,193 @@ footer .best-items .number {
   display: flex;
   justify-content: space-around;
   color: gray;
+}
+.side-box {
+  width: 25%;
+  padding-top: 20%;
+  margin-right: 2%;
+}
+.side-box section:not(.side-box section:first-child) {
+  margin-top: 5%;
+}
+.side-box .topic {
+  display: flex;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  border-left: none;
+  margin-bottom: 2%;
+}
+.side-box .topic h4 {
+  box-shadow: inset 1px 2px 14px rgba(0, 0, 0, 0.3);
+}
+.side-box .topic a {
+  margin-right: 2%;
+}
+.side-box .topic h4,
+.side-box .topic a {
+  padding: 4% 1%;
+}
+.side-box .consideration ul li {
+  position: relative;
+  height: 15vh;
+}
+.content-pic img {
+  width: 100%;
+  height: 15vh;
+}
+.side-box .consideration .black-layer {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+.consideration .content {
+  color: white;
+}
+.content .title {
+  font-size: medium;
+  font-weight: bold;
+}
+.content .side-footer {
+  position: relative;
+  top: 60px;
+  padding: 0 2% 2% 0;
+}
+
+.consideration .circle1 {
+  width: 60px;
+  height: 60px;
+  transform: translate(-4%, 10%);
+}
+.consideration .circle2 {
+  width: 40px;
+  height: 40px;
+}
+.consideration .circle3 {
+  width: 30px;
+  height: 20px;
+}
+.side-footer ul {
+  display: flex;
+  position: relative;
+  right: 170px;
+}
+.side-footer li {
+  margin-left: 2%;
+}
+.side-footer .right {
+  float: right;
+}
+.side-footer .left {
+  float: left;
+}
+.side-footer .left img {
+  width: 20px;
+  height: 20px;
+}
+.side-box .consideration .black-layer,
+.consideration .content {
+  position: absolute;
+  top: 0;
+}
+.side-box .cinema {
+}
+.side-box .cin-item {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.cin-item .cinema-content {
+  margin-right: 2%;
+  color: #bbb;
+}
+.cin-item h2 {
+  font-size: large;
+  font-weight: bold;
+  text-align: right;
+  color: darkgray;
+}
+.cin-item p {
+  font-size: x-small;
+  text-align: right;
+  margin-bottom: 1%;
+}
+.cin-item .cin-icons {
+  display: flex;
+  /* justify-content: space-around; */
+  position: relative;
+  text-align: right;
+}
+.cin-item .num {
+  margin-left: 2%;
+  line-height: 1;
+}
+.cin-item .cin-pic {
+  position: relative;
+  width: 20%;
+}
+.cin-item .cin-pic img {
+  width: 60px;
+  height: 100%;
+}
+.cin-item .cin-pic .black-layer {
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(
+    transparent,
+    rgba(69, 69, 69, 0.8),
+    rgba(83, 82, 82, 0.9)
+  );
+  width: 100%;
+  height: 80%;
+}
+
+.cin-item .cin-bottom-img {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  background: #000;
+}
+.cin-item #bottom-img {
+  width: 20px;
+  height: 20px;
+  padding: 1%;
+}
+/* bakhsh ha */
+.bakhsh-ha .topic-icon {
+  display: flex;
+  margin-right: 5%;
+}
+.bakhsh-ha .topic-icon li:first-child {
+  background-color: #e76bbf;
+  box-shadow: inset 1px 2px 14px rgba(0, 0, 0, 0.3);
+}
+.bakhsh-ha .topic-icon li {
+  padding: 20%;
+}
+.bakhsh-ha .topic-icon li img {
+  width: 20px;
+  height: 20px;
+}
+.bakhsh-ha .bakhsh-item {
+  display: flex;
+  margin-bottom: 5%;
+}
+.bakhsh-item h2 {
+  margin-right: 2%;
+  font-weight: bolder;
+  text-align: right;
+}
+.bakhsh-ha button {
+  padding: 2%;
+}
+/* first one */
+.side-box .consideration .cons-first-item,
+.side-box .consideration .cons-first-item .content-pic img {
+  height: 30vh;
+}
+.consideration .cons-first-item .circle1 {
+  transform: translate(-220%, -20%);
+}
+.cons-first-item .content .side-footer {
+  top: 150px;
 }
